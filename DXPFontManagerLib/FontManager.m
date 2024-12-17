@@ -30,7 +30,7 @@ static NSString *other3Family;
 
 // 设置正常字体
 + (UIFont *)setNormalFontSize:(NSInteger)size {
-	if (!normalFamiy) {
+	if (normalFamiy.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:normalFamiy size:size];
@@ -38,7 +38,7 @@ static NSString *other3Family;
 
 // 设置中型字体
 + (UIFont *)setMediumFontSize:(NSInteger)size {
-	if (!mediumFamily) {
+	if (mediumFamily.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:mediumFamily size:size];
@@ -46,7 +46,7 @@ static NSString *other3Family;
 
 // 设置轻型字体
 + (UIFont *)setLightFontSize:(NSInteger)size {
-	if (!lightFamily) {
+	if (lightFamily.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:lightFamily size:size];
@@ -54,7 +54,7 @@ static NSString *other3Family;
 
 // 设置粗体字体
 + (UIFont *)setBoldFontSize:(NSInteger)size {
-	if (!boldFamily) {
+	if (boldFamily.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:boldFamily size:size];
@@ -62,7 +62,7 @@ static NSString *other3Family;
 
 // 设置其他字体1
 + (UIFont *)setOther1FontSize:(NSInteger)size {
-	if (!other1Family) {
+	if (other1Family.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:other1Family size:size];
@@ -70,7 +70,7 @@ static NSString *other3Family;
 
 // 设置其他字体2
 + (UIFont *)setOther2FontSize:(NSInteger)size {
-	if (!other2Family) {
+	if (other2Family.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:other2Family size:size];
@@ -78,7 +78,7 @@ static NSString *other3Family;
 
 // 设置其他字体3
 + (UIFont *)setOther3FontSize:(NSInteger)size {
-	if (!other3Family) {
+	if (other3Family.length == 0) {
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:other3Family size:size];
