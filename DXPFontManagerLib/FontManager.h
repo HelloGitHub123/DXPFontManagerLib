@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置粗体字体
 + (UIFont *)setBoldFontSize:(NSInteger)size;
 
+/// 设置斜体字体
++ (UIFont *)setItalicFontSize:(NSInteger)size;
+
 // 设置其他字体1
 + (UIFont *)setOther1FontSize:(NSInteger)size;
 

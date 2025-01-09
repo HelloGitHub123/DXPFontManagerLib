@@ -11,6 +11,7 @@ static NSString *normalFamiy;
 static NSString *mediumFamily;
 static NSString *lightFamily;
 static NSString *boldFamily;
+static NSString *italicFamily;
 static NSString *other1Family;
 static NSString *other2Family;
 static NSString *other3Family;
@@ -23,6 +24,7 @@ static NSString *other3Family;
 	mediumFamily = [dicFont valueForKey:@"Medium"];
 	lightFamily = [dicFont valueForKey:@"Light"];
 	boldFamily = [dicFont valueForKey:@"Bold"];
+    italicFamily = [dicFont valueForKey:@"Italic"];
 	other1Family = [dicFont valueForKey:@"Other1"];
 	other2Family = [dicFont valueForKey:@"Other2"];
 	other3Family = [dicFont valueForKey:@"Other3"];
@@ -58,6 +60,14 @@ static NSString *other3Family;
 		return [UIFont systemFontOfSize:size];
 	}
 	return [UIFont fontWithName:boldFamily size:size];
+}
+
+/// 设置斜体字体
++ (UIFont *)setItalicFontSize:(NSInteger)size {
+    if (!italicFamily) {
+        return [UIFont italicSystemFontOfSize:size];
+    }
+    return [UIFont fontWithName:italicFamily size:size];
 }
 
 // 设置其他字体1
