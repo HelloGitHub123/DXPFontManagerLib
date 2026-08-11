@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置斜体字体
 + (UIFont *)setItalicFontSize:(NSInteger)size;
 
+/// 设置粗斜字体
++ (UIFont *)setBoldItalicFontSize:(NSInteger)size;
+
 // 设置其他字体1
 + (UIFont *)setOther1FontSize:(NSInteger)size;
 
