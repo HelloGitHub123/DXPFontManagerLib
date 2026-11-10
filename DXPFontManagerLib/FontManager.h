@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置中型字体
 + (UIFont *)setMediumFontSize:(NSInteger)size;
 
++ (UIFont *)setSemiBoldFontSize:(NSInteger)size;
+
 // 设置轻型字体
 + (UIFont *)setLightFontSize:(NSInteger)size;
 

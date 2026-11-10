@@ -9,6 +9,7 @@
 
 static NSString *normalFamiy;
 static NSString *mediumFamily;
+static NSString *semiBoldFamily;
 static NSString *lightFamily;
 static NSString *boldFamily;
 static NSString *italicFamily;
@@ -22,7 +23,8 @@ static NSString *other3Family;
 + (void)setFontFamilyList:(NSDictionary *)dicFont {
 	if (dicFont.allKeys.count == 0) return;
 	normalFamiy = [dicFont valueForKey:@"Normal"];
-	mediumFamily = [dicFont valueForKey:@"Medium"];
+    mediumFamily = [dicFont valueForKey:@"Medium"];
+    semiBoldFamily = [dicFont valueForKey:@"SemiBold"];
 	lightFamily = [dicFont valueForKey:@"Light"];
 	boldFamily = [dicFont valueForKey:@"Bold"];
     italicFamily = [dicFont valueForKey:@"Italic"];
@@ -49,6 +51,17 @@ static NSString *other3Family;
     UIFont *font = nil;
     if (mediumFamily) {
         font = [UIFont fontWithName:mediumFamily size:size];
+    }
+    if (!font) {
+        font = [UIFont boldSystemFontOfSize:size];
+    }
+    return font;
+}
+
++ (UIFont *)setSemiBoldFontSize:(NSInteger)size {
+    UIFont *font = nil;
+    if (semiBoldFamily) {
+        font = [UIFont fontWithName:semiBoldFamily size:size];
     }
     if (!font) {
         font = [UIFont boldSystemFontOfSize:size];
